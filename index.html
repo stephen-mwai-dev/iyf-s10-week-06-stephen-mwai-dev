@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌦️ Pro Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+
+        <form id="searchform">
+            <input type="text" id="cityInput" placeholder="Enter city name..." required />
+            <button type="submit">Search</button>
+        </form>
+
+        <button id="autoBtn" class="auto-btn">Use My Location</button>
+
+        <div id="loading" class="hidden">Loading the forecast...</div>
+        <div id="error" class="hidden"></div>
+        
+        <div id="weatherContent" class="hidden">
+            <div id="weatherMain">
+                <h2 id="cityName"></h2>
+                <p id="dateLabel" class="date-header">Today</p>
+                <div class="main-temp-display">
+                    <img id="mainIcon" src="" alt="Icon">
+                    <span id="temp"></span>
+                </div>
+                <p id="description"></p>
+                <p id="details"></p>
+            </div>
+
+            <div class="section-title">48-Hour Forecast</div>
+            <div id="hourlyContainer" class="hourly-scroll"></div>
+
+            <div class="section-title">8-Day Forecast</div>
+            <div id="forecastCards" class="daily-list"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
